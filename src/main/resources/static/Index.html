@@ -1,0 +1,95 @@
+﻿<!doctype html>
+<!--
+[HTML MarkUp Structure]
+
+Project:    Yima Admin App
+Version:    1.0.1
+Last change:    06/06/16 [Changelog: (http://www.IssatisLab.com)]
+Implemented By: IssatisLab (http://www.IssatisLab.com)
+
+
+[Table of contents]
+
+1. Meta Tags
+2. Css References
+3. Sidebar Menu
+4. Sidebar Form
+5. Main Page Content
+    5.1. Page Header
+        5.1.1. BreadCrumb
+        5.1.2. Header Buttons
+    5.2. Page Navbar
+    5.3. Page Body
+6. JavaScript References
+7. Page Related Scripts
+-->
+
+<html lang="en" ng-app="app" ng-controller="MainController">
+
+<head>
+    <!--
+    [1. Meta Tags]
+    -->
+    <meta charset="utf-8" />
+    <title ng-bind="'CCN | ' + pageTitle || 'CCN'">CCN</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="shortcut icon" href="assets/home/img/ccn-fundo-branco.png" type="image/x-icon">
+    <!--
+    [2. Css References]
+    -->
+    <link rel="stylesheet" href="assets/home/css/normalize.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" id="link-bootstrap" />
+    <link rel="stylesheet" href="#null" type="text/css" id="link-bootstrap-rtl" />
+    <link rel="stylesheet" href="assets/home/css/app.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/pe-icon-7-stroke.css" type="text/css" />
+    <link rel="stylesheet" href="assets/home/css/estilo.css" />
+    <script src="assets/home/js/lib/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+</head>
+
+<body style="overflow:hidden;" id="top">
+    <div class="animsition">
+
+        <div ui-view="login"></div>
+
+        <!--
+        [6. JavaScript References]
+        -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/home/js/lib/jquery.flexslider-min.js"></script>
+        <script src="assets/home/js/lib/jquery.waypoints.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/modernizr.custom.js"></script>
+        <script src="assets/js/lib/slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="assets/js/lib/animsition/animsition.min.js"></script>
+        <script src="assets/js/lib/angular/angular.min.js"></script>
+        <script src="assets/js/lib/angular/angular-animate.min.js"></script>
+        <script src="assets/js/lib/angular/angular-touch.min.js"></script>
+        <script src="assets/js/lib/angular/ui-bootstrap-tpls.min.js"></script>
+        <script src="assets/js/lib/angular/angular-ui-router.min.js"></script>
+        <script src="assets/js/lib/angular/ocLazyLoad.min.js"></script>
+        <script src="assets/js/lib/angular/angular-breadcrumb.min.js"></script>
+        <script src="assets/js/lib/angular-input-masks/angular-input-masks-standalone.min.js"></script>
+        <script src="assets/js/main.js"></script>
+
+        <script src="assets/js/app/app.module.js"></script>
+        <script src="assets/js/app/app.config.js"></script>
+        <script src="assets/js/app/app.routes.js"></script>
+        <script src="assets/js/app/services/pessoa.fisica.service.js"></script>
+        <script src="assets/js/app/services/pessoa.juridica.service.js"></script>
+        <script src="assets/js/app/directives/easypiechart.directive.js"></script>
+        <script src="assets/js/app/directives/sparkline.directive.js"></script>
+        <script src="assets/js/app/directives/panel.directive.js"></script>
+        <script src="assets/js/app/controllers/main.controller.js"></script>
+        <script src="assets/js/app/controllers/sidebar.controller.js"></script>
+        <script src="assets/js/app/controllers/home.controller.js"></script>
+        <script src="assets/js/app/controllers/pessoa.fisica.controller.js"></script>
+        <script src="assets/js/app/controllers/pessoa.juridica.controller.js"></script>
+    </div>
+</body>
+
+</html>

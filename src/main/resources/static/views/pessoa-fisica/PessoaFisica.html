@@ -1,0 +1,72 @@
+<div id="viewValidacaoCadastro" ng-controller="PessoaFisicaController as vm" style="padding-left: 2%;padding-right: 2%">
+    <div class="row" ng-if="!vm.isValidacaoCadastro">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form>
+                    <div class="form-group col-sm-5 col-md-5 col-lg-5">
+                        <label for="txtCPF">Informe o CPF</label>
+                        <input ID="txtCPF" type="text" ng-model="vm.cpf" class="form-control" ui-br-cpf-mask />
+                    </div>
+                    <div class="form-group col-sm-2 col-md-2 col-lg-2">
+                        <button type="button" style="margin-top:24px" ng-click="vm.pesquisarPessoasPorCpf()"
+                            class="btn btn-success glyphicon glyphicon-filter" title="Pesquisar..."/>
+                        <!-- <button type="button"
+                            ng-if="pesquisaRealizada && tipoAcessoUsuarioLogado == tipoAcesso.Administrador && !isShowIrregularidade"
+                            style="margin-top:24px;margin-left:5px" ng-click="cadastrarIrregularidade(Cpf)"
+                            class="btn btn-danger glyphicon glyphicon-thumbs-down" title="Informar irregularidade..." />
+                        <button type="button" ng-if="irregular && !isCadastroIrregularidade"
+                            style="margin-top:24px;margin-left:5px" ng-click="mostrarIrregularidades(Cpf)"
+                            class="btn btn-danger glyphicon glyphicon-eye-open" title="Mostrar irregularidades." /> -->
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="panel panel-default">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Nome
+                                    </th>
+                                    <th>
+                                        CPF
+                                    </th>
+                                    <th>
+                                        Cartório
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="pessoa in vm.listaPessoas">
+                                    <td>
+                                        {{pessoa.nome}}
+                                    </td>
+                                    <td>
+                                        {{pessoa.cpf}}
+                                    </td>
+                                    <td>
+                                        {{pessoa.nomeCartorio}}
+                                    </td>
+                                    <td>
+                                        <!-- <button ng-if="pessoa.id" ng-click="validarDadosBiometria(pessoa)"
+                                            title="Validar Biometria" class="btn btn-success">
+                                            <span class="glyphicon glyphicon-thumbs-up"></span>
+                                        </button> -->
+                                        <button ng-if="pessoa.id" ng-click="vm.validarPessoa(pessoa.id)" title="Validar pessoa"
+                                            class="btn btn-warning">
+                                            <span class="glyphicon glyphicon-pencil"></span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div ng-show="vm.listaPessoas.length == 0 && vm.buscaRealizada" style="text-align: center;color: rgb(153, 153, 153);font-size: 18px;margin-top: 20px;margin-bottom: 20px;padding-bottom: 20px;">
+                        Nenhum registro encontrado.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-include ng-if="vm.isValidacaoCadastro" src="vm.urlValidacaoCadastro" />
+</div>

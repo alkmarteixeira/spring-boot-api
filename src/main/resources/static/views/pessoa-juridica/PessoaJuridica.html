@@ -1,0 +1,61 @@
+<div id="viewPessoaJuridica" ng-controller="PessoaJuridicaController as vm" style="padding-left: 2%;padding-right: 2%">
+    <div class="row" ng-if="!vm.isValidacaoCadastro">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form>
+                    <div class="form-group col-sm-5 col-md-5 col-lg-5">
+                        <label for="txtCPF">Informe o CNPJ</label>
+                        <input ID="txtCPF" type="text" ng-model="vm.cnpj" class="form-control" ui-br-cnpj-mask />
+                    </div>
+                    <div class="form-group col-sm-2 col-md-2 col-lg-2">
+                        <button type="button" style="margin-top:24px" ng-click="vm.pesquisarPessoasPorCnpj()"
+                            class="btn btn-success glyphicon glyphicon-filter" title="Pesquisar..."/>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="panel panel-default">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Nome
+                                    </th>
+                                    <th>
+                                        Cnpj
+                                    </th>
+                                    <th>
+                                        Cartório
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="pessoaJuridica in vm.listaPessoas">
+                                    <td>
+                                        {{pessoaJuridica.nome}}
+                                    </td>
+                                    <td>
+                                        {{pessoaJuridica.cnpj}}
+                                    </td>
+                                    <td>
+                                        {{pessoaJuridica.nomeCartorio}}
+                                    </td>
+                                    <td>
+                                        <button ng-if="pessoaJuridica.id" ng-click="vm.validarPessoa(pessoaJuridica.id)" title="Validar pessoa"
+                                            class="btn btn-warning">
+                                            <span class="glyphicon glyphicon-pencil"></span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div ng-show="vm.listaPessoasJuridicas.length == 0 && vm.buscaRealizada" style="text-align: center;color: rgb(153, 153, 153);font-size: 18px;margin-top: 20px;margin-bottom: 20px;padding-bottom: 20px;">
+                        Nenhum registro encontrado.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-include ng-if="vm.isValidacaoCadastro" src="vm.urlValidacaoCadastro" />
+</div>

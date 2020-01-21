@@ -1,0 +1,150 @@
+<div class="row">
+    <form>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">VALIDAR PESSOA</h3>
+                <div class="panel-tools">
+                    <a class="tools-action" ng-click="vm.voltarParaTelaPesquisa()" data-toggle="dispose">
+                        <i class="pe-7s-close"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="panel-body" style="padding:1px">
+                <uib-tabset active="active">
+                    <uib-tab index="0">
+                        <uib-tab-heading>
+                            <span>Dados</span>
+                        </uib-tab-heading>
+                        <div class="panel panel-white">
+                            <div style="width:85%;float:left">
+                                <div class="form-group" style="width: 75%; float: left;">
+                                    <label for="nome-completo">Nome</label>
+                                    <input type="text" id="nome-completo" ng-model="vm.pessoa.nome" class="form-control" ng-disabled="true">
+                                </div>
+                                <div class="form-group" style="width: 23%; float: left;margin-left:2%">
+                                    <label for="cpf">CPF</label>
+                                    <input type="text" id="cpf" ng-model="vm.pessoa.cpf" class="form-control" ng-disabled="true">
+                                </div>
+                                <div class="form-group" style="width: 20%; float: left;">
+                                    <label for="sexo">Sexo</label>
+                                    <input type="text" id="sexo" ng-model="vm.pessoa.sexo" class="form-control" ng-disabled="true">
+                                </div>
+                                <div class="form-group" style="width: 20%; float: left; margin-left:2%">
+                                    <label for="estado-civil">Estado Civil</label>
+                                    <input type="text" id="estado-civil" ng-model="vm.pessoa.estadoCivil" class="form-control" ng-disabled="true">
+                                </div>
+                                <div class="form-group" style="width: 20%; float: left; margin-left:2%">
+                                    <label for="nascimento">Nascimento</label>
+                                    <input type="text" id="nascimento" ng-model="vm.pessoa.dataNascimento" class="form-control" ng-disabled="true">
+                                </div>
+                                <div class="form-group" style="width: 34%; float: left; margin-left:2%">
+                                    <label for="profissao">Profissão</label>
+                                    <input type="text" id="profissao" ng-model="vm.pessoa.profissao" class="form-control" ng-disabled="true">
+                                </div>
+                            </div>
+                            <div style="float: left;margin-top: 2%; margin-left: 4%">
+                                <img ng-src="{{vm.pessoa.imagemFoto}}" class="w-120 h-120">
+                            </div>
+                            <div style="width:100%;float:left">
+                                <div class="form-group" style="width: 25%; float: left;">
+                                    <label for="nacionalidade">Nacionalidade</label>
+                                    <input type="text" id="nacionalidade" ng-model="vm.pessoa.nacionalidade" class="form-control" ng-disabled="true">
+                                </div>
+                                <div class="form-group" style="width: 39%; float: left;margin-left:2%">
+                                    <label for="naturalidade">Naturalidade</label>
+                                    <input type="text" id="naturalidade" ng-model="vm.pessoa.cidadeNaturalidade" class="form-control" ng-disabled="true">
+                                </div>
+                                <div class="form-group" style="width: 15%; float: left;margin-left:2%">
+                                    <label for="telefone">Telefone</label>
+                                    <input type="text" id="telefone" ng-model="vm.pessoa.nuTelefone" class="form-control" ng-disabled="true" ui-br-phone-number>
+                                </div>
+                                <div class="form-group" style="width: 15%; float: left;margin-left:2%">
+                                    <label for="celular">Celular</label>
+                                    <input type="text" id="celular" ng-model="vm.pessoa.nuCelular" class="form-control" ng-disabled="true" ui-br-phone-number>
+                                </div>
+                                <div class="form-group" style="width: 15%; float: left;">
+                                    <label for="docIdentidade">Doc. de Identidade</label>
+                                    <input type="text" id="docIdentidade" ng-model="vm.pessoa.docIdentidade" class="form-control" ng-disabled="true">
+                                </div>
+                                <div class="form-group" style="width: 15%; float: left;margin-left:2%">
+                                    <label for="dsOrgaoEmissor">Orgão Emissor</label>
+                                    <input type="text" id="dsOrgaoEmissor" ng-model="vm.pessoa.docDsSgOrgaoEmissor" class="form-control" ng-disabled="true">
+                                </div>
+                                <div class="form-group" style="width: 15%; float: left;margin-left:2%">
+                                    <label for="UfOrgaoEmissor">UF Orgão Emissor</label>
+                                    <input type="text" id="UfOrgaoEmissor" ng-model="vm.pessoa.docUfOrgaoEmissor" class="form-control" ng-disabled="true">
+                                </div>
+                                <div class="form-group" style="width: 15%; float: left; margin-left:2%">
+                                    <label for="strDataEmissao">Data Emissão</label>
+                                    <input type="text" id="strDataEmissao" ng-model="vm.pessoa.docDataEmissao" class="form-control" ng-disabled="true">
+                                </div>
+                                <div class="form-group" style="width: 15%; float: left; margin-left:2%">
+                                    <label for="ficha">Ficha</label>
+                                    <input type="text" id="ficha" ng-model="vm.pessoa.numeroFicha" class="form-control" ng-disabled="true">
+                                </div>
+                                <div class="form-group" style="width: 15%; float: left; margin-left:2%">
+                                    <label for="dtFicha">Data da Ficha</label>
+                                    <input type="text" id="dtFicha" ng-model="vm.pessoa.dataFicha" class="form-control" ng-disabled="true">
+                                </div>
+                                <div class="form-group" style="width: 49%; float: left;">
+                                    <label for="mae">Mãe</label>
+                                    <input type="text" id="mae" ng-model="vm.pessoa.mae" class="form-control" ng-disabled="true">
+                                </div>
+                                <div class="form-group" style="width: 49%; float: left;margin-left:2%">
+                                    <label for="pai">Pai</label>
+                                    <input type="text" id="pai" ng-model="vm.pessoa.pai" class="form-control" ng-disabled="true">
+                                </div>
+                                <div class="form-group" style="width: 60%; float: left">
+                                    <label for="endereco">Endereço</label>
+                                    <input type="text" id="endereco" ng-model="vm.pessoa.enderecoCompleto" class="form-control" ng-disabled="true">
+                                </div>
+                                <div class="form-group" style="width: 28%; float: left;margin-left:2%">
+                                    <label for="cidade-endereco">Cidade</label>
+                                    <input type="text" id="cidade-endereco" ng-model="vm.pessoa.cidadeEndereco" class="form-control" ng-disabled="true">
+                                </div>
+                                <div class="form-group" style="width: 8%; float: left;margin-left:2%">
+                                    <label for="uf-endereco">UF</label>
+                                    <input type="text" id="uf-endereco" ng-model="vm.pessoa.ufEndereco" class="form-control" ng-disabled="true">
+                                </div>
+                                <div class="form-group" style="width: 20%; float: left;">
+                                    <label for="email">E-mail</label>
+                                    <input type="text" id="email" ng-model="vm.pessoa.email" class="form-control" ng-disabled="true">
+                                </div>
+                                <div class="form-group" style="width: 78%; float: left;margin-left:2%">
+                                    <label for="observacao">Observação</label>
+                                    <input type="text" id="observacao" ng-model="vm.pessoa.observacao" class="form-control" ng-disabled="true">
+                                </div>
+                            </div>
+                        </div>
+                    </uib-tab>
+                    <uib-tab index="1">
+                        <uib-tab-heading>
+                            <span>Imagens</span>
+                        </uib-tab-heading>
+                        <div class="thumbswrapper" ng-if="!vm.imagens.length == 0">
+                            <ul>
+                                <li ng-repeat="image in vm.imagens">
+                                    <div class="thumbwrapper">
+                                        <a ng-href="" ng-click="vm.mostrarImagem($event,image,$index)">
+                                            <img class="thumbnail" ng-src="{{image.src}}" />
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="width:80%;" ng-if="!vm.imagens.length == 0">
+                            <input type="range" style="width:80%;margin-left:20%" max="700" min="0"
+                                ng-model="vm.tamanhoFullImg" />
+                            <div style="width: 80%; height: 465px; overflow:auto;margin-left:20%">
+                                <img style="width:{{vm.tamanhoFullImg}}%"  ng-src="{{vm.imagemSelecionada}}" />
+                            </div>
+                        </div>
+                        <div ng-if="vm.imagens.length == 0">
+                            <h3>Não existem imagens disponíveis para o cadastro.</h3>
+                        </div>
+                    </uib-tab>
+                </uib-tabset>
+            </div>
+        </div>
+    </form>
+</div>
