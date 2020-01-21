@@ -11,4 +11,4 @@ Projeto para estudo do spring boot
 
 # Base de dados de exemplo
 
-Banco de dados existente [db_exemplo](./blob/master/db_exemplo.tar)
+Banco de dados existente [db_exemplo](./db_exemplo.tar)
